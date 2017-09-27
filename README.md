@@ -12,7 +12,7 @@ Now go to project folder and execute following command.
 
 ## Configuration
 
-Create `config/app.php` file throught copy of file `app.default.php`
+copy `config/app.default.php` and update filename to `config/app.php`
 
 Read and edit `config/app.php` and setup the `'Datasources'` and `'test'`
 configuration relevant for application.
