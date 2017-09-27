@@ -12,9 +12,10 @@ Now go to project folder and execute following command.
 
 ## Configuration
 
-Read and edit `config/app.php` and setup the `'Datasources'` and any other
-configuration relevant for your application.
+Create `config/app.php` file throught copy of file `app.default.php`
 
+Read and edit `config/app.php` and setup the `'Datasources'` and `'test'`
+configuration relevant for application.
 
 Now run following command to create a Users table in database.
 
