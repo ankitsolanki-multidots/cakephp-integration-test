@@ -2,11 +2,13 @@
 
 ## Installation
 
-git clone `https://github.com/multidots/cakephp-integration-test.git`
+Create project clone as following.
+
+`git clone https://github.com/multidots/cakephp-integration-test.git`
 
 Now go to project folder and execute following command.
 
-composer update
+`composer update`
 
 ## Configuration
 
@@ -16,9 +18,9 @@ configuration relevant for your application.
 
 Now run following command to create a Users table in database.
 
-bin\cake migrations migrate
+`bin\cake migrations migrate`
 
 Now To run Integration testing execute following from root path of project folder.
 
-vendor\bin\phpunit tests\TestCase\Controller\UsersControllerTest.php
+`vendor\bin\phpunit tests\TestCase\Controller\UsersControllerTest.php`
 
