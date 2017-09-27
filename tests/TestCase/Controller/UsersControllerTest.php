@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Test\TestCase\Controller;
 
 use App\Controller\UsersController;
@@ -25,12 +26,12 @@ class UsersControllerTest extends IntegrationTestCase
      * @return void
      */
     public function testlogin()
-    {	
-       $data = ['email' => 'lorem@example.com', 'password' => '123456'];
+    {
+        $data = ['email' => 'lorem@example.com', 'password' => '123456'];
 
-       $this->post('/login', $data);
+        $this->post('/login', $data);
 
-       $this->assertResponseCode(200);
-       // More asserts.
+        $this->assertResponseCode(200);
+        // More asserts.
     }
 }

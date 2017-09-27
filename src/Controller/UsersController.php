@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 
 use App\Controller\AppController;
@@ -17,7 +18,8 @@ class UsersController extends AppController
      *
      * @return \Cake\Http\Response|void
      */
-     Public function login() {
+    Public function login()
+    {
         $this->autoRender = false;
         $this->response->type('json');
         $entity = $this->Users->newEntity($this->request->data, ['validate' => 'Login']);
@@ -28,18 +30,18 @@ class UsersController extends AppController
                 $response['error'][] = $validationMessage[key($validationMessage)];
             }
         } else {
-	$user = $this->Users->find()
+            $user = $this->Users->find()
                     ->select(['id', 'name', 'email'])
                     ->where([
                         'email' => $entity->email,
-                        'password' =>$entity->password
+                        'password' => $entity->password
                     ])
                     ->first();
-             if (empty($user)) {
+            if (empty($user)) {
                 $this->response->statusCode(401);
                 $response['message'] = __('Invalid email or password.');
             } else {
-	    $response['message'] = __('Login Successful.');	
+                $response['message'] = __('Login Successful.');
             }
         }
         $this->response->body(json_encode($response));

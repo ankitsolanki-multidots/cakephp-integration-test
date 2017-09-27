@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model\Table;
 
 use Cake\ORM\Query;
@@ -48,27 +49,27 @@ class UsersTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
+                ->integer('id')
+                ->allowEmpty('id', 'create');
 
         $validator
-            ->scalar('name')
-            ->requirePresence('name', 'create')
-            ->notEmpty('name');
+                ->scalar('name')
+                ->requirePresence('name', 'create')
+                ->notEmpty('name');
 
         $validator
-            ->email('email')
-            ->requirePresence('email', 'create')
-            ->notEmpty('email');
+                ->email('email')
+                ->requirePresence('email', 'create')
+                ->notEmpty('email');
 
         $validator
-            ->scalar('password')
-            ->requirePresence('password', 'create')
-            ->notEmpty('password');
+                ->scalar('password')
+                ->requirePresence('password', 'create')
+                ->notEmpty('password');
 
         return $validator;
     }
-    
+
     /**
      * Login validation rules.
      *
@@ -79,14 +80,14 @@ class UsersTable extends Table
     {
 
         $validator
-            ->email('email')
-            ->requirePresence('email', 'create', 'Email cannot be empty.')
-            ->notEmpty('email');
+                ->email('email')
+                ->requirePresence('email', 'create', 'Email cannot be empty.')
+                ->notEmpty('email');
 
         $validator
-            ->scalar('password')
-            ->requirePresence('password', 'create', 'Password cannot be empty.')
-            ->notEmpty('password');
+                ->scalar('password')
+                ->requirePresence('password', 'create', 'Password cannot be empty.')
+                ->notEmpty('password');
 
         return $validator;
     }
